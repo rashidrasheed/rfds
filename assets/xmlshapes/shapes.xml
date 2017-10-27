@@ -1,0 +1,437 @@
+<shapes name="mxgraph.webicons">
+    <shape aspect="variable" name="dish-antenna" strokewidth="inherit">
+        <connections>
+            <constraint x="1" y="0.2" perimeter="0" name="dish-connector" constraint="d1"/>
+        </connections>
+        <background>
+        
+            <path>
+                <move x="20" y="50"/>
+                <line x="0" y="100"/>
+                <line x="90" y="100"/>
+                <line x="80" y="60"/>
+            </path>
+            <stroke />
+
+            <fillcolor color="black"/>
+            <path>
+                <move x="30" y="10"/>
+                <quad x1="0" y1="25" x2="20" y2="50"/>
+                <quad x1="50" y1="75" x2="100" y2="53"/>
+                <close/>
+            </path>
+            <fillstroke/>
+            
+            <path>
+                <move x="65" y="32"/>
+                <line x="100" y="20"/>
+            </path>
+        </background>
+        
+        <foreground>
+            <stroke/>
+        </foreground>
+
+        <attribute name="rashid" value="value"/>
+
+    </shape>
+
+
+    <shape name="battery" aspect="variable">
+        <connections>
+            <constraint x="0.225" y="-0.1" perimeter="0" name="1st Cell" constraint="1c"/>
+            <constraint x="0.775" y="-0.1" perimeter="0" name="2nd Cell" constraint="2c"/>
+        </connections>
+
+        <background>
+        <path>
+        <!--T-->
+        <move x="0" y="0"/>
+        <line x="100" y="0"/>
+        <line x="100" y="100"/>
+        <line x="0" y="100"/>
+        <line x="0" y="0"/>
+
+        <!-- draw cells -->
+        <move x="20" y="0"/>
+        <line x="25" y="0"/>
+        <line x="25" y="-10"/>
+        <line x="20" y="-10"/>
+        <line x="20" y="0"/>
+
+        <!-- draw cells -->
+        <move x="75" y="0"/>
+        <line x="80" y="0"/>
+        <line x="80" y="-10"/>
+        <line x="75" y="-10"/>
+        <line x="75" y="0"/>
+
+        </path>
+        </background>
+        <foreground>
+        <fillstroke />
+        </foreground>
+    </shape>
+
+
+    <shape name="annotation" h="98" w="50" aspect="variable" strokewidth="inherit">
+        <connections>
+            <constraint x="0.25" y="0" perimeter="0" name="N1"/>
+            <constraint x="0.75" y="0" perimeter="0" name="N2"/>
+        </connections>
+        <background>
+        <path>
+        <move x="50" y="0"/>
+        <line x="0" y="0"/>
+        <line x="0" y="98"/>
+        <line x="50" y="98"/>
+        </path>
+        </background>
+        <foreground>
+        <stroke/>
+        </foreground>
+    </shape>
+
+    <shape name="diamond" aspect="variable">
+        <connections>
+            <constraint x="0" y="0.5" perimeter="0" name="diamond" constraint="1d"/>
+        </connections>
+
+        <background>
+        <path>
+        <!--T-->
+        <move x="0" y="50"/>
+        <line x="50" y="0"/>
+        <line x="100" y="50"/>
+        <line x="50" y="100"/>
+        <line x="0" y="50"/>
+
+        </path>
+        </background>
+        <foreground>
+        <fillstroke />
+        </foreground>
+    </shape>
+
+    <shape name="3dbox" aspect="variable">
+        <connections>
+            <constraint x="0" y="0.1" perimeter="0" name="3dbox" constraint="13d"/>
+            <constraint x="0" y="1" perimeter="0" name="3dbox" constraint="2s3d"/>
+        </connections>
+
+        <background>
+            <path>
+                <move x="0" y="10"/>
+                <line x="10" y="0"/>
+                <line x="100" y="0"/>
+                <line x="100" y="90"/>
+                <line x="90" y="100"/>
+                <line x="0" y="100"/>
+                <line x="0" y="100"/>
+                <line x="0" y="10"/>
+            </path>
+            <fillstroke/>
+        </background>
+
+        <foreground>
+            <path>
+                <move x="0" y="10"/>
+                <line x="90" y="10"/>
+                <line x="100" y="0"/>
+            </path>
+            <stroke/>
+            <path>
+                <move x="90" y="10"/>
+                <line x="90" y="100"/>
+            </path>
+            <stroke/>
+        </foreground>
+        
+    </shape>
+    
+    <shape aspect="variable" h="48.51" name="cloud" strokewidth="2" w="92.1">
+        <connections>
+            <constraint name="N" perimeter="0" x="0.5" y="0.08"/>
+        </connections>
+        <foreground>
+            <path>
+                <move x="80.28" y="48.51"/>
+                <arc large-arc-flag="1" rx="10" ry="10" sweep-flag="0" x="77.28" x-axis-rotation="0" y="23.51"/>
+                <arc large-arc-flag="0" rx="22" ry="22" sweep-flag="0" x="35.28" x-axis-rotation="0" y="14.51"/>
+                <arc large-arc-flag="0" rx="12" ry="12" sweep-flag="0" x="14.28" x-axis-rotation="0" y="21.51"/>
+                <arc large-arc-flag="0" rx="13" ry="13" sweep-flag="0" x="13.28" x-axis-rotation="0" y="48.51"/>
+                <close/>
+            </path>
+            <fillstroke/>
+        </foreground>
+    </shape>
+
+    <shape aspect="variable" h="100" name="comm-link" strokewidth="2" w="30">
+        <connections>
+            <constraint name="N" perimeter="0" x="0.5" y="0"/>
+            <constraint name="S" perimeter="0" x="0.5" y="1"/>
+            <constraint name="W" perimeter="0" x="0" y="0.42"/>
+            <constraint name="E" perimeter="0" x="1" y="0.58"/>
+        </connections>
+        <foreground>
+            <path>
+                <move x="15" y="100"/>
+                <line x="0" y="42"/>
+                <line x="20" y="47"/>
+                <line x="15" y="0"/>
+                <line x="30" y="58"/>
+                <line x="10" y="53"/>
+                <close/>
+            </path>
+            <fillstroke/>
+        </foreground>
+    </shape>
+
+
+    <shape aspect="variable" h="30" name="dvr" strokewidth="2" w="90">
+        <connections>
+            <constraint name="N" perimeter="0" x="0.5" y="0"/>
+            <constraint name="S" perimeter="0" x="0.5" y="1"/>
+            <constraint name="W" perimeter="0" x="0.05" y="0.5"/>
+            <constraint name="E" perimeter="0" x="0.95" y="0.5"/>
+            <constraint name="NW" perimeter="0" x="0.28" y="0"/>
+            <constraint name="SW" perimeter="0" x="0.02" y="0.98"/>
+            <constraint name="NE" perimeter="0" x="0.72" y="0"/>
+            <constraint name="SE" perimeter="0" x="0.98" y="0.98"/>
+        </connections>
+        <foreground>
+            <path>
+                <move x="4" y="13"/>
+                <line x="25" y="0"/>
+                <line x="65" y="0"/>
+                <line x="86" y="13"/>
+                <close/>
+            </path>
+            <fillstroke/>
+            <roundrect arcsize="13.33" h="15" w="90" x="0" y="15"/>
+            <fillstroke/>
+            <fillcolor color="#ffffff"/>
+            <ellipse h="8" w="8" x="66" y="18.5"/>
+            <fill/>
+            <rect h="2" w="4" x="4" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="11" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="18" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="25" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="32" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="39" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="46" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="53" y="18"/>
+            <fill/>
+            <rect h="2" w="4" x="4.12" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="11" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="18" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="25" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="32" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="39" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="46" y="23"/>
+            <fill/>
+            <rect h="2" w="4" x="53" y="23"/>
+            <fill/>
+        </foreground>
+    </shape>
+
+    <shape aspect="variable" h="29" name="hub" strokewidth="2" w="100">
+        <connections>
+            <constraint name="N" perimeter="0" x="0.5" y="0"/>
+            <constraint name="S" perimeter="0" x="0.5" y="1"/>
+            <constraint name="W" perimeter="0" x="0" y="0.5"/>
+            <constraint name="E" perimeter="0" x="1" y="0.5"/>
+            <constraint name="NW" perimeter="0" x="0.05" y="0.05"/>
+            <constraint name="SW" perimeter="0" x="0.1" y="1"/>
+            <constraint name="NE" perimeter="0" x="0.95" y="0.05"/>
+            <constraint name="SE" perimeter="0" x="0.9" y="1"/>
+        </connections>
+        <foreground>
+            <save/>
+            <roundrect arcsize="20" h="25" w="100" x="0" y="0"/>
+            <fillstroke/>
+            <rect h="4" w="80" x="10" y="25"/>
+            <fillstroke/>
+            <fillcolor color="#ffffff"/>
+            <path>
+                <move x="3" y="7"/>
+                <line x="9" y="7"/>
+                <line x="9" y="10"/>
+                <line x="7" y="10"/>
+                <line x="7" y="11"/>
+                <line x="5" y="11"/>
+                <line x="5" y="10"/>
+                <line x="3" y="10"/>
+                <close/>
+            </path>
+            <fill/>
+            <ellipse h="16" w="16" x="80" y="4.5"/>
+            <fill/>
+            <ellipse h="4" w="4" x="73" y="3"/>
+            <fill/>
+            <ellipse h="4" w="4" x="73" y="18"/>
+            <fill/>
+            <ellipse h="4" w="4" x="73" y="10.5"/>
+            <fill/>
+            <path>
+                <move x="11.5" y="7"/>
+                <line x="17.5" y="7"/>
+                <line x="17.5" y="10"/>
+                <line x="15.5" y="10"/>
+                <line x="15.5" y="11"/>
+                <line x="13.5" y="11"/>
+                <line x="13.5" y="10"/>
+                <line x="11.5" y="10"/>
+                <close/>
+                <move x="20" y="7"/>
+                <line x="26" y="7"/>
+                <line x="26" y="10"/>
+                <line x="24" y="10"/>
+                <line x="24" y="11"/>
+                <line x="22" y="11"/>
+                <line x="22" y="10"/>
+                <line x="20" y="10"/>
+                <close/>
+                <move x="28.5" y="7"/>
+                <line x="34.5" y="7"/>
+                <line x="34.5" y="10"/>
+                <line x="32.5" y="10"/>
+                <line x="32.5" y="11"/>
+                <line x="30.5" y="11"/>
+                <line x="30.5" y="10"/>
+                <line x="28.5" y="10"/>
+                <close/>
+                <move x="37" y="7"/>
+                <line x="43" y="7"/>
+                <line x="43" y="10"/>
+                <line x="41" y="10"/>
+                <line x="41" y="11"/>
+                <line x="39" y="11"/>
+                <line x="39" y="10"/>
+                <line x="37" y="10"/>
+                <close/>
+                <move x="45.5" y="7"/>
+                <line x="51.5" y="7"/>
+                <line x="51.5" y="10"/>
+                <line x="49.5" y="10"/>
+                <line x="49.5" y="11"/>
+                <line x="47.5" y="11"/>
+                <line x="47.5" y="10"/>
+                <line x="45.5" y="10"/>
+                <close/>
+                <move x="54" y="7"/>
+                <line x="60" y="7"/>
+                <line x="60" y="10"/>
+                <line x="58" y="10"/>
+                <line x="58" y="11"/>
+                <line x="56" y="11"/>
+                <line x="56" y="10"/>
+                <line x="54" y="10"/>
+                <close/>
+                <move x="62.5" y="7"/>
+                <line x="68.5" y="7"/>
+                <line x="68.5" y="10"/>
+                <line x="66.5" y="10"/>
+                <line x="66.5" y="11"/>
+                <line x="64.5" y="11"/>
+                <line x="64.5" y="10"/>
+                <line x="62.5" y="10"/>
+                <close/>
+            </path>
+            <fill/>
+            <ellipse h="4" w="4" x="63.5" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="55" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="46.5" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="38" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="29.5" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="21" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="12.5" y="15"/>
+            <fill/>
+            <ellipse h="4" w="4" x="4" y="15"/>
+            <fill/>
+            <restore/>
+            <rect/>
+            <stroke/>
+            <strokewidth width="1"/>
+            <path>
+                <move x="83" y="12.5"/>
+                <line x="92" y="12.5"/>
+            </path>
+            <fillstroke/>
+            <path>
+                <move x="90" y="10.5"/>
+                <line x="92" y="12.5"/>
+                <line x="90" y="14.5"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+
+
+    <shape aspect="variable" h="57.75" name="laptop" strokewidth="2" w="101.5">
+        <connections>
+            <constraint name="N" perimeter="0" x="0.5" y="0"/>
+            <constraint name="S" perimeter="0" x="0.5" y="1"/>
+            <constraint name="W" perimeter="0" x="0.15" y="0.5"/>
+            <constraint name="E" perimeter="0" x="0.85" y="0.5"/>
+            <constraint name="NW" perimeter="0" x="0.16" y="0"/>
+            <constraint name="SW" perimeter="0" x="0" y="1"/>
+            <constraint name="NE" perimeter="0" x="0.83" y="0"/>
+            <constraint name="SE" perimeter="0" x="1" y="1"/>
+        </connections>
+        <foreground>
+            <linejoin join="round"/>
+            <path>
+                <move x="14.16" y="39.45"/>
+                <line x="87.1" y="39.45"/>
+                <line x="101.5" y="57.75"/>
+                <line x="0" y="57.75"/>
+                <close/>
+                <move x="16.75" y="0"/>
+                <line x="84.25" y="0"/>
+                <line x="86.25" y="39"/>
+                <line x="14.75" y="39"/>
+                <close/>
+            </path>
+            <fillstroke/>
+            <path>
+                <move x="17.25" y="44"/>
+                <line x="85.25" y="44"/>
+                <move x="12.75" y="49"/>
+                <line x="89.75" y="49"/>
+                <move x="32.25" y="53.5"/>
+                <line x="67.25" y="53.5"/>
+            </path>
+            <stroke/>
+            <fillcolor color="#ffffff"/>
+            <path>
+                <move x="20.05" y="3.5"/>
+                <line x="81.05" y="3.5"/>
+                <line x="82.75" y="35.5"/>
+                <line x="18.25" y="35.5"/>
+                <close/>
+            </path>
+            <fill/>
+        </foreground>
+    </shape>
+
+</shapes>

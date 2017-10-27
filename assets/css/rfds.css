@@ -1,0 +1,204 @@
+/*
+    for bootstarp
+*/
+
+.padding-left-right-0{
+    padding: 0 !important;
+}
+
+body{
+    margin: 0;
+}
+
+.objects{
+    position: absolute;
+    overflow: hidden;
+    padding: 15px;
+    left: 0;
+    top: 68px;
+    width: 72px;
+    bottom: 0;
+    background: #f3f3f3;
+}
+
+.logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 72px;
+    padding: 10px;
+    background: white;
+}
+
+.drawing-area{
+    position: absolute;
+    overflow: hidden;
+    left: 72px;
+    top: 68px;
+    right: 200px;
+    bottom: 0px;
+    background: url(../images/grid.gif);
+    touch-action: none;
+}
+
+.topbar{
+    position: absolute;
+    left: 72px;
+    right: 0;
+}
+
+img.mxToolbarMode {
+    text-align: center;
+    display: block;
+    width: 30px;
+}
+
+/* Menus */
+#menus {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3db2e1;
+    font-family: calibri;
+}
+
+#menus li {
+    float: left;
+}
+
+#menus li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#menus li a:hover {
+    background-color: #111;
+}
+
+/* Toolbar */
+#toolbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6e6f6f;
+    font-family: calibri;
+}
+
+#toolbar .toolbaritem img{
+    width: 16px;
+}
+
+#toolbar li {
+    float: left;
+}
+
+#toolbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#toolbar li a:hover {
+    background-color: #111;
+}
+
+#toolbar li a img {
+    width: 100%;
+}
+
+/* Properties */
+#properties{
+    position: absolute;
+    overflow: hidden;
+    top: 68px;
+    right: 0;
+    width: 200px;
+}
+
+#properties .tab-section{
+    background-color: #f3f3f3;
+}
+
+#properties h3{
+    background: #f3f3f3;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.tab-pane{
+    padding: 8px;
+}
+
+/* Popup */
+body div.mxPopupMenu {
+    -webkit-box-shadow: 3px 3px 6px #C0C0C0;
+    -moz-box-shadow: 3px 3px 6px #C0C0C0;
+    box-shadow: 3px 3px 6px #C0C0C0;
+    background: white;
+    position: absolute;
+    border: 3px solid #e7e7e7;
+    padding: 3px;
+}
+body table.mxPopupMenu {
+    border-collapse: collapse;
+    margin: 0px;
+}
+body tr.mxPopupMenuItem {
+    color: black;
+    cursor: default;
+}
+body td.mxPopupMenuItem {
+    padding: 6px 60px 6px 30px;
+    font-family: Arial;
+    font-size: 10pt;
+}
+body td.mxPopupMenuIcon {
+    background-color: white;
+    padding: 0px;
+}
+body tr.mxPopupMenuItemHover {
+    background-color: #eeeeee;
+    color: black;
+}
+table.mxPopupMenu hr {
+    border-top: solid 1px #cccccc;
+}
+table.mxPopupMenu tr {
+    font-size: 4pt;
+}
+
+.pageView{
+    
+    width:200px;
+    height:160px;
+    background:transparent;
+    border-style:solid;
+    border-color:lightgray;
+}
+
+#pageViewContainer{
+    z-index: 1;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    width:200px;
+}
+
+#pageViewContainer h3{
+    background: #f3f3f3;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
