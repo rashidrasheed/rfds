@@ -1,0 +1,163 @@
+<html>
+<head>
+	<title>Toolbar example for mxGraph</title>
+
+	<!-- Sets the basepath for the library if not in same directory -->
+	<script type="text/javascript">
+		mxBasePath = 'assets';
+	</script>
+
+	<!-- RFD's CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/rfds.css"/>
+
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="assets/css/toastr.css">
+
+	<!-- mxGraph library -->
+	<script type="text/javascript" src="assets/js/mxClient.js"></script>
+
+	<!-- jQuery library -->
+	<script src="assets/js/jquery.min.js"></script>
+
+	<!-- Boostrap library -->
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- Boostrap library -->
+	<script src="assets/js/toastr.min.js"></script>
+
+	<!-- Technical params -->
+	<script type="text/javascript" src="assets/js/technical_params.js"></script>
+
+	<!-- Technical params -->
+	<script type="text/javascript" src="assets/js/custom_validation.js"></script>
+
+	<!-- RFDS implementation file -->
+	<script type="text/javascript" src="assets/js/rfds.js"></script>
+
+</head>
+
+<!-- Calls the main function after the page has loaded. -->
+<body onload="main(
+				document.getElementById('objects'),
+				document.getElementById('drawing-area')
+			);">
+
+	<div class="topbar">
+			<!-- Menus -->
+			<ul id="menus">
+				<li><a class="active" href="#">File</a></li>
+				<li><a href="#">Edit</a></li>
+				<li><a href="#">View</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+
+			<!-- Top Toolbar -->
+			<ul id="toolbar">
+				<li><a class="toolbaritem" href="#" title="Save" onclick="showGraphXML()"><img src="assets/images/save.gif" ></a></li>
+				<li><a class="toolbaritem" href="#" title="Save As"><img src="assets/images/saveas.gif" ></a></li>
+				<li><a class="toolbaritem" href="#" title="Zoom In" onclick="zoomIn()"><img src="assets/images/zoom_in.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Zoom Out" onclick="zoomOut()"><img src="assets/images/zoom_out.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Zoom Actual" onclick="zoomActual()"><img src="assets/images/view_1_132.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Undo"><img src="assets/images/undo.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Redo"><img src="assets/images/redo.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Copy"><img src="assets/images/copy.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Cut"><img src="assets/images/cut.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Paste"><img src="assets/images/paste.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Delete" onclick="deleteItem()"><img src="assets/images/delete2.png"></a></li>
+				<li><a class="toolbaritem" href="#" title="Rename"><img src="assets/images/text.gif"></a></li>
+				<li><a class="toolbaritem" href="#" title="Print" onclick="printView()"><img src="assets/images/print32.png"></a></li>
+			</ul>	
+		
+	</div>
+
+	<!-- left Toolbar -->
+	<div >
+		<img src="assets/img/logo.png" class="logo">
+		<div id="objects" class="objects"></div>
+	</div>
+
+	<!-- Drawing Board -->
+	<div id="drawing-area" class="drawing-area"></div>
+
+	<!-- Properties -->
+	<div id="properties" class="properties" style="display: none;">
+
+		<h3 class="text-center">Properties</h3>
+		<ul class="nav nav-tabs">
+		  <li class="active"><a data-toggle="tab" href="#general">General</a></li>
+		  <li><a data-toggle="tab" href="#technical">Technical</a></li>
+		</ul>
+	  
+		<div class="tab-content">
+		  <div id="general" class="tab-pane fade in active">
+			<p>
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>Properties</th>
+							<th>Value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>ID</th>
+							<td><input type="text" class="form-control" id="shape_id" disabled></td>
+						</tr>
+						<tr>
+							<th>Shape</th>
+							<td><input type="text" class="form-control" id="shape_shape" disabled></td>
+						</tr>
+						<tr>
+							<th>Value</th>
+							<td><input type="text" class="form-control" id="shape_value" onchange="updateSelectedShapeValues()"></td>
+						</tr>
+						<tr>
+							<th>X</th>
+							<td><input type="number" class="form-control" id="shape_x" onchange="updateSelectedShapeValues()"></td>
+						</tr>
+						<tr>
+							<th>Y</th>
+							<td><input type="number" class="form-control" id="shape_y" onchange="updateSelectedShapeValues()"></td>
+						</tr>
+						<tr>
+							<th>Width</th>
+							<td><input type="number" class="form-control" id="shape_width" onchange="updateSelectedShapeValues()"></td>
+						</tr>
+						<tr>
+							<th>Height</th>
+							<td><input type="number" class="form-control" id="shape_height" onchange="updateSelectedShapeValues()"></td>
+						</tr>
+					</tbody>
+				</table>
+			</p>
+		  </div>
+		  <div id="technical" class="tab-pane fade">
+			<p>
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>Properties</th>
+							<th>Value</th>
+						</tr>
+					</thead>
+					<tbody id="tp_body">
+
+					</tbody>
+				</table>
+			</p>
+		  </div>
+		</div>
+	</div>
+
+	<div id="pageViewContainer">
+			<h3 class="text-center">Page View</h3>
+		<div id="outlineContainer" class="pageView"></div>
+	</div>
+	
+
+</body>
+</html>
